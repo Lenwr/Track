@@ -1,50 +1,63 @@
 <div class="container">
-  <div class="table">
-    <div class="table-header">
-      <div class="header__item">
-        <a id="name" class="filter__link" href="#">Nom</a>
+  <div
+    *ngIf="selectedClient; then afficherLeClient; else afficherLesClients"
+  ></div>
+  <ng-template #afficherLesClients>
+    <div class="table">
+      <div class="table-header">
+        <div class="header__item">
+          <a id="name" class="filter__link" href="#">Nom</a>
+        </div>
+        <div class="header__item">
+          <a id="wins" class="filter__link filter__link--number" href="#">
+            prenom
+          </a>
+        </div>
+        <div class="header__item">
+          <a id="draws" class="filter__link filter__link--number" href="#">
+            email
+          </a>
+        </div>
+        <div class="header__item">
+          <a id="losses" class="filter__link filter__link--number" href="#">
+            adresse
+          </a>
+        </div>
+        <div class="header__item">
+          <a id="total" class="filter__link filter__link--number" href="#">
+            Téléphone
+          </a>
+        </div>
+        <div class="header__item">
+          <a id="total" class="filter__link filter__link--number" href="#">
+            mes colis
+          </a>
+        </div>
+        <div class="header__item">
+          <a id="total" class="filter__link filter__link--number" href="#">
+            Code QR
+          </a>
+        </div>
       </div>
-      <div class="header__item">
-        <a id="wins" class="filter__link filter__link--number" href="#">
-          prenom
-        </a>
-      </div>
-      <div class="header__item">
-        <a id="draws" class="filter__link filter__link--number" href="#">
-          email
-        </a>
-      </div>
-      <div class="header__item">
-        <a id="losses" class="filter__link filter__link--number" href="#">
-          adresse
-        </a>
-      </div>
-      <div class="header__item">
-        <a id="total" class="filter__link filter__link--number" href="#">
-          Téléphone
-        </a>
-      </div>
-      <div class="header__item">
-        <a id="total" class="filter__link filter__link--number" href="#">
-          Mes colis
-        </a>
-      </div>
-      <div class="header__item">
-        <a id="total" class="filter__link filter__link--number" href="#">
-          QR Code
-        </a>
+
+      <div class="table-content" *ngFor="let client of myData">
+        <div class="table-row">
+          <div class="table-data">{{ client.attributes.name }}</div>
+          <div class="table-data">{{ client.attributes.surname }}</div>
+          <div class="table-data">{{ client.attributes.email }}</div>
+          <div class="table-data">{{ client.attributes.address }}</div>
+          <div class="table-data">{{ client.attributes.phoneNumber }}</div>
+          <div class="table-data">
+            <button (click)="onSelected(client)">Voir</button>
+          </div>
+          <div class="table-data"><button>Générer</button></div>
+        </div>
       </div>
     </div>
-    <div class="table-content" *ngFor="let client of myData">
-      <div class="table-row">
-        <div class="table-data">{{ client.attributes.name }}</div>
-        <div class="table-data">{{ client.attributes.surname }}</div>
-        <div class="table-data">{{ client.attributes.email }}</div>
-        <div class="table-data">{{ client.attributes.address }}</div>
-        <div class="table-data">{{ client.attributes.phoneNumber }}</div>
-        <div class="table-data"><button>Voir</button></div>
-        <div class="table-data"><button>Générer</button></div>
-      </div>
-    </div>
-  </div>
+  </ng-template>
+
+  <ng-template #afficherLeClient>
+    <button (click)="reinitialiser()">retour</button>
+    <app-client-details [client]="selectedClient"></app-client-details>
+  </ng-template>
 </div>

@@ -7,11 +7,20 @@ import { Client } from '../interface/client'
 })
 export class UsersDataService {
   url = 'http://localhost:1337/api/clients'
+
+  userUrl = 'http://localhost:1337/api/clients:id'
+
   constructor(private http: HttpClient) {}
+
   users() {
     return this.http.get(this.url)
   }
-  saveUser(data: Client) {
-    return this.http.post(this.url, data)
+
+  user() {
+    return this.http.get(this.userUrl)
+  }
+
+  saveUser(data: any) {
+    return this.http.post<any>(this.url, data)
   }
 }

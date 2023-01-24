@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { Data } from '../interface/data'
-import { MyDataService } from '../service/my-data.service'
+import { Router } from '@angular/router'
+import { UsersDataService } from '../service/users-data.service'
 
 @Component({
   selector: 'app-clients',
@@ -10,12 +10,26 @@ import { MyDataService } from '../service/my-data.service'
 export class ClientsComponent implements OnInit {
   //regler le probleme de pointage data
   myData: any
-  constructor(private myDataService: MyDataService) {}
+  //variable dans laquelle mettre le client sélectionné
+  selectedClient: any
+
+  constructor(
+    private myDataService: UsersDataService,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
-    this.myDataService.getData().subscribe((result: any) => {
+    this.myDataService.users().subscribe((result: any) => {
       this.myData = result.data
       console.log(this.myData)
     })
+  }
+
+  onSelected(client: any) {
+    this.selectedClient = client
+  }
+
+  reinitialiser() {
+    this.selectedClient = false
   }
 }
