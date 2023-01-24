@@ -1,0 +1,7 @@
+<qrcode
+  qrdata="https://www.youtube.com"
+  (qrCodeURL)="onCodeChange($event)"
+  [width]="256"
+  [errorCorrectionLevel]="'H'"
+></qrcode>
+<a [href]="url" download>Telecharger</a>

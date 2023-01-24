@@ -19,11 +19,21 @@ align-items: center;
   margin-right: 10px;
 }
 .form input{
-  width: 600px;
+  width: 200px;
   height: 30px;
   box-shadow: 1px 1px 0em 0em grey;
+  border-radius: 10px;
 }
 
 button{
   margin: 40px;
 }
+@media (min-width: 600px){
+  .form input{
+   width: 500px;
+  }
+}
+@media (min-width: 900px){
+  
+}
+

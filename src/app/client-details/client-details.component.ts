@@ -7,9 +7,16 @@ import { Component, Input, OnInit } from '@angular/core'
 })
 export class ClientDetailsComponent implements OnInit {
   @Input() client?: any
+  qr: boolean = false
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  
+  generer(client: any) {
+    this.qr = true
+  }
+  reset() {
+    this.qr = false
+  }
 }

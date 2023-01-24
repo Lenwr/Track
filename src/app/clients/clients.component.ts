@@ -29,6 +29,7 @@ export class ClientsComponent implements OnInit {
     this.selectedClient = client
   }
 
+
   reinitialiser() {
     this.selectedClient = false
   }

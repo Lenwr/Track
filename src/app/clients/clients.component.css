@@ -66,3 +66,11 @@ margin: 20px;
  .filter__link.asc::after {
 	 content: "(asc)";
 }
+.clientDetails{
+	display: flex;
+}
+
+
+.reset{
+	height: 5px;
+}

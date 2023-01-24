@@ -2,6 +2,7 @@
   <div
     *ngIf="selectedClient; then afficherLeClient; else afficherLesClients"
   ></div>
+
   <ng-template #afficherLesClients>
     <div class="table">
       <div class="table-header">
@@ -33,11 +34,6 @@
             mes colis
           </a>
         </div>
-        <div class="header__item">
-          <a id="total" class="filter__link filter__link--number" href="#">
-            Code QR
-          </a>
-        </div>
       </div>
 
       <div class="table-content" *ngFor="let client of myData">
@@ -50,14 +46,14 @@
           <div class="table-data">
             <button (click)="onSelected(client)">Voir</button>
           </div>
-          <div class="table-data"><button>Générer</button></div>
         </div>
       </div>
     </div>
   </ng-template>
-
   <ng-template #afficherLeClient>
-    <button (click)="reinitialiser()">retour</button>
+    <div class="reset">
+      <button (click)="reinitialiser()">retour</button>
+    </div>
     <app-client-details [client]="selectedClient"></app-client-details>
   </ng-template>
 </div>

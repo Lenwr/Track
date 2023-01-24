@@ -10,7 +10,10 @@ import { HttpClientModule } from '@angular/common/http'
 import { ClientsComponent } from './clients/clients.component'
 import { AppRoutingModule } from './app-routing.module'
 import { ColisComponent } from './colis/colis.component';
-import { ClientDetailsComponent } from './client-details/client-details.component'
+import { ClientDetailsComponent } from './client-details/client-details.component';
+import { ScanComponent } from './scan/scan.component'
+import { QRCodeModule } from 'angularx-qrcode';
+import { QrCodeComponent } from './qr-code/qr-code.component'
 
 @NgModule({
   declarations: [
@@ -21,8 +24,10 @@ import { ClientDetailsComponent } from './client-details/client-details.componen
     ClientsComponent,
     ColisComponent,
     ClientDetailsComponent,
+    ScanComponent,
+    QrCodeComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule, QRCodeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
