@@ -9,13 +9,13 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { ClientsComponent } from './clients/clients.component'
 import { AppRoutingModule } from './app-routing.module'
-import { ColisComponent } from './colis/colis.component';
-import { ClientDetailsComponent } from './client-details/client-details.component';
-import { CameraComponent } from './camera/camera.component'
-import { QRCodeModule } from 'angularx-qrcode';
+import { ColisComponent } from './colis/colis.component'
+import { ClientDetailsComponent } from './client-details/client-details.component'
+import { QRCodeModule } from 'angularx-qrcode'
 import { QrCodeComponent } from './qr-code/qr-code.component'
-import { WebcamModule } from 'ngx-webcam';
-import { CamComponent } from './cam/cam.component'
+import { WebcamModule } from 'ngx-webcam'
+import { CamComponent } from './cam/cam.component';
+import { ScanComponent } from './scan/scan.component'
 
 @NgModule({
   declarations: [
@@ -26,12 +26,18 @@ import { CamComponent } from './cam/cam.component'
     ClientsComponent,
     ColisComponent,
     ClientDetailsComponent,
-    CameraComponent,
     QrCodeComponent,
     CamComponent,
-    
+    ScanComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule, QRCodeModule,WebcamModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    QRCodeModule,
+    WebcamModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
