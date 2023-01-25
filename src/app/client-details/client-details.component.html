@@ -1,11 +1,11 @@
 <div *ngIf="qr; then qrCode; else clients"></div>
 
 <ng-template #clients>
-  <div *ngIf="client">
-    <h2>nom : {{ client.attributes.name }}</h2>
-    <div>Email {{ client.attributes.email }}</div>
-    <div>Adresse : {{ client.attributes.address }}</div>
-    <div>Téléphone : {{ client.attributes.phoneNumber }}</div>
+  <div class="infos" *ngIf="client">
+    <h2>Nom :     {{ client.attributes.name }}</h2>
+    <div>Email :     {{ client.attributes.email }}</div>
+    <div>Adresse :   {{ client.attributes.address }}</div>
+    <div>Téléphone :    {{ client.attributes.phoneNumber }}</div>
     <div><h2>colis</h2></div>
   </div>
   <div class="qrCode">

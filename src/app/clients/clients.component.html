@@ -4,7 +4,7 @@
   ></div>
 
   <ng-template #afficherLesClients>
-    <div class="table">
+    <div class="table" style="overflow-x: auto;">
       <div class="table-header">
         <div class="header__item">
           <a id="name" class="filter__link" href="#">Nom</a>
@@ -12,11 +12,6 @@
         <div class="header__item">
           <a id="wins" class="filter__link filter__link--number" href="#">
             prenom
-          </a>
-        </div>
-        <div class="header__item">
-          <a id="draws" class="filter__link filter__link--number" href="#">
-            email
           </a>
         </div>
         <div class="header__item">
@@ -40,7 +35,6 @@
         <div class="table-row">
           <div class="table-data">{{ client.attributes.name }}</div>
           <div class="table-data">{{ client.attributes.surname }}</div>
-          <div class="table-data">{{ client.attributes.email }}</div>
           <div class="table-data">{{ client.attributes.address }}</div>
           <div class="table-data">{{ client.attributes.phoneNumber }}</div>
           <div class="table-data">
