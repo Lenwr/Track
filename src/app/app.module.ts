@@ -11,9 +11,11 @@ import { ClientsComponent } from './clients/clients.component'
 import { AppRoutingModule } from './app-routing.module'
 import { ColisComponent } from './colis/colis.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
-import { ScanComponent } from './scan/scan.component'
+import { CameraComponent } from './camera/camera.component'
 import { QRCodeModule } from 'angularx-qrcode';
 import { QrCodeComponent } from './qr-code/qr-code.component'
+import { WebcamModule } from 'ngx-webcam';
+import { CamComponent } from './cam/cam.component'
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { QrCodeComponent } from './qr-code/qr-code.component'
     ClientsComponent,
     ColisComponent,
     ClientDetailsComponent,
-    ScanComponent,
+    CameraComponent,
     QrCodeComponent,
+    CamComponent,
+    
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule, QRCodeModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule, QRCodeModule,WebcamModule],
   providers: [],
   bootstrap: [AppComponent],
 })
