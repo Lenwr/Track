@@ -2,11 +2,21 @@
 
 <ng-template #clients>
   <div class="infos" *ngIf="client">
-    <h2>Nom :     {{ client.attributes.name }}</h2>
-    <div>Email :     {{ client.attributes.email }}</div>
-    <div>Adresse :   {{ client.attributes.address }}</div>
-    <div>Téléphone :    {{ client.attributes.phoneNumber }}</div>
-    <div><h2>colis</h2></div>
+    <h2>Nom : {{ client.attributes.name }}</h2>
+    <div>Email : {{ client.attributes.email }}</div>
+    <div>Adresse : {{ client.attributes.address }}</div>
+    <div>Téléphone : {{ client.attributes.phoneNumber }}</div>
+    <div>
+      <h2>colis</h2>
+      <h3>Désignation :</h3>
+      <h3>Descriptif :</h3>
+      <h3>Date Réception :</h3>
+    </div>
+    <div>
+      <h2>Etat Envoi</h2>
+      <h3>Exemple coli 1:</h3>
+      <h3>Exemple coli 2 :</h3>
+    </div>
   </div>
   <div class="qrCode">
     <button (click)="generer(client)">générer codeQR</button>

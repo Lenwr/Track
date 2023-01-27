@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Client } from '../interface/client'
+import { environment } from 'src/environments/environment'
 
 @Injectable({
   providedIn: 'root',
 })
 export class UsersDataService {
-  url = 'http://localhost:1337/api/clients'
+  url = environment.apiUrl + '/clients';
 
-  userUrl = 'http://localhost:1337/api/clients:id'
+  userUrl = environment.apiUrl + '/clients:id'
 
   constructor(private http: HttpClient) {}
 

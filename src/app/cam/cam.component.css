@@ -1,1 +1,10 @@
-.actionBtn{}
+.actionBtn{
+
+    width: 50%;
+    margin: 10px;
+}
+
+.icons{
+    display: flex;
+
+}
