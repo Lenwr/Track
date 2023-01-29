@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Client } from '../interface/client'
 import { environment } from 'src/environments/environment'
 
 @Injectable({
