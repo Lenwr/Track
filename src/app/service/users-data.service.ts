@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment'
   providedIn: 'root',
 })
 export class UsersDataService {
-  url = environment.apiUrl + '/clients';
+  url = environment.apiUrl + '/clients'
 
   userUrl = environment.apiUrl + '/clients:id'
 
