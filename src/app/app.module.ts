@@ -13,9 +13,10 @@ import { ColisComponent } from './colis/colis.component'
 import { ClientDetailsComponent } from './client-details/client-details.component'
 import { QRCodeModule } from 'angularx-qrcode'
 import { QrCodeComponent } from './qr-code/qr-code.component'
-import { WebcamModule } from 'ngx-webcam'
 import { CamComponent } from './cam/cam.component';
 import { ScanComponent } from './scan/scan.component'
+import { ZXingScannerModule } from '@zxing/ngx-scanner'
+
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ScanComponent } from './scan/scan.component'
     HttpClientModule,
     AppRoutingModule,
     QRCodeModule,
-    WebcamModule,
+    ZXingScannerModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],

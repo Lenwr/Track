@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 import { SafeUrl } from '@angular/platform-browser'
 
 @Component({
@@ -9,6 +9,8 @@ import { SafeUrl } from '@angular/platform-browser'
 export class QrCodeComponent implements OnInit {
   url: SafeUrl = ''
 
+  @Input() id?: number
+
   constructor() {}
 
   ngOnInit(): void {}
@@ -16,5 +18,9 @@ export class QrCodeComponent implements OnInit {
   onCodeChange(url: SafeUrl) {
     this.url = url
     console.log(url)
+  }
+
+  showId() {
+    console.log(this.id)
   }
 }

@@ -1,7 +1,8 @@
 <qrcode
-  qrdata="https://www.youtube.com"
+  qrdata="{{ id }}"
   (qrCodeURL)="onCodeChange($event)"
   [width]="256"
   [errorCorrectionLevel]="'H'"
 ></qrcode>
+<button class="button" (click)="showId()">Mon Id</button>
 <a [href]="url" download>Telecharger</a>

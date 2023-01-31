@@ -12,6 +12,7 @@ export class ClientsComponent implements OnInit {
   myData: any
   //variable dans laquelle mettre le client sélectionné
   selectedClient: any
+  
 
   constructor(
     private myDataService: UsersDataService,

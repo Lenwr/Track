@@ -1,22 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { WebcamImage } from 'ngx-webcam';
+import { Component, OnInit, ViewChild } from '@angular/core'
+import { ZXingScannerComponent } from '@zxing/ngx-scanner'
+import { Result } from '@zxing/library'
 
 @Component({
   selector: 'app-scan',
   templateUrl: './scan.component.html',
-  styleUrls: ['./scan.component.css']
+  styleUrls: ['./scan.component.css'],
 })
 export class ScanComponent implements OnInit {
-
-  constructor() { }
+ 
+  scanResult : any
+  constructor() {}
 
   ngOnInit(): void {
   }
-    // latest snapshot
-    public webcamImage: WebcamImage | undefined
 
-    handleImage(webcamImage: WebcamImage) {
-      this.webcamImage = webcamImage
-    }
+  onCodeResult(Result:string){
+    this.scanResult=Result
+  }
 
 }

@@ -24,6 +24,6 @@
 </ng-template>
 
 <ng-template #qrCode>
-  <app-qr-code></app-qr-code>
+  <app-qr-code [id]="client.id"></app-qr-code>
   <button class="reset" (click)="reset()">retour</button>
 </ng-template>
