@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core'
-import { ZXingScannerComponent } from '@zxing/ngx-scanner'
-import { Result } from '@zxing/library'
+import { Component, OnInit} from '@angular/core'
 
 @Component({
   selector: 'app-scan',
@@ -8,7 +6,7 @@ import { Result } from '@zxing/library'
   styleUrls: ['./scan.component.css'],
 })
 export class ScanComponent implements OnInit {
- 
+
   scanResult : any
   constructor() {}
 

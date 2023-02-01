@@ -15,7 +15,7 @@ import { QRCodeModule } from 'angularx-qrcode'
 import { QrCodeComponent } from './qr-code/qr-code.component'
 import { CamComponent } from './cam/cam.component';
 import { ScanComponent } from './scan/scan.component'
-import { ZXingScannerModule } from '@zxing/ngx-scanner'
+import {ZXingScannerModule} from "@zxing/ngx-scanner";
 
 
 @NgModule({
@@ -37,8 +37,7 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner'
     HttpClientModule,
     AppRoutingModule,
     QRCodeModule,
-    ZXingScannerModule
-
+    ZXingScannerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
