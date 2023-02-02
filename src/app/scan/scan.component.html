@@ -1,7 +1,7 @@
 <div *ngIf="scanResult; then client; else camera"></div>
 
 <ng-template #camera>
-<zxing-scanner (scanSuccess)="onCodeResult($event)" ></zxing-scanner>
+<zxing-scanner [previewFitMode]="'cover'" class="camera" (scanSuccess)="onCodeResult($event)" ></zxing-scanner>
 </ng-template>
 
 <ng-template #client>
