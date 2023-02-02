@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment'
 export class UsersDataService {
   url = environment.apiUrl + '/clients'
 
-  userUrl = environment.apiUrl + '/clients:id'
+  userUrl = environment.apiUrl + '/clients:2'
 
   constructor(private http: HttpClient) {}
 

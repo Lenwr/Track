@@ -13,9 +13,11 @@ import { ColisComponent } from './colis/colis.component'
 import { ClientDetailsComponent } from './client-details/client-details.component'
 import { QRCodeModule } from 'angularx-qrcode'
 import { QrCodeComponent } from './qr-code/qr-code.component'
-import { CamComponent } from './cam/cam.component';
 import { ScanComponent } from './scan/scan.component'
 import {ZXingScannerModule} from "@zxing/ngx-scanner";
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -28,7 +30,6 @@ import {ZXingScannerModule} from "@zxing/ngx-scanner";
     ColisComponent,
     ClientDetailsComponent,
     QrCodeComponent,
-    CamComponent,
     ScanComponent,
   ],
   imports: [
@@ -38,8 +39,11 @@ import {ZXingScannerModule} from "@zxing/ngx-scanner";
     AppRoutingModule,
     QRCodeModule,
     ZXingScannerModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatIconModule,
   ],
-  providers: [],
+  providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

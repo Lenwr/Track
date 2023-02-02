@@ -9,12 +9,14 @@ import { UsersDataService } from '../service/users-data.service';
 export class ColisComponent implements OnInit {
 
   myData: any;
+  user: any;
 
   constructor(private dataService: UsersDataService) { }
 
   ngOnInit(): void {
-    this.dataService.user().subscribe((result)=>{
-      this.myData = result
+    this.dataService.users().subscribe((result)=>{
+      this.user = result
+      console.log(this.user.data[0])
     })
   }
 

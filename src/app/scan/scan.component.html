@@ -1,9 +1,28 @@
-<h2> ScanMe </h2>
+<div *ngIf="scanResult; then client; else camera"></div>
 
-<zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+<ng-template #camera>
+<zxing-scanner (scanSuccess)="onCodeResult($event)" ></zxing-scanner>
+</ng-template>
 
-
-<div>
-  <small>Scan Result</small>
-  <strong>{{scanResult}}</strong>
-</div>
+<ng-template #client>
+  <div class="infos" *ngIf="client">
+    <h2>Nom : {{ redirectUser.attributes.name }}</h2>
+    <div>Email : {{ redirectUser.attributes.email }}</div>
+    <div>Adresse : {{ redirectUser.attributes.address }}</div>
+    <div>Téléphone : {{ redirectUser.attributes.phoneNumber }}</div>
+    <div>
+      <h2>colis</h2>
+      <h3>Désignation :</h3>
+      <h3>Descriptif :</h3>
+      <h3>Date Réception :</h3>
+    </div>
+    <div>
+      <h2>Etat Envoi</h2>
+      <h3>Exemple coli 1:</h3>
+      <h3>Exemple coli 2 :</h3>
+    </div>
+    <div class="reset">
+      <button (click)="reinitialiser()">retour</button>
+    </div>
+  </div>
+</ng-template>
