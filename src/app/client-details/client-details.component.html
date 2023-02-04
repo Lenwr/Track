@@ -2,28 +2,44 @@
 
 <ng-template #clients>
   <div class="infos" *ngIf="client">
-    <h2>Nom : {{ client.attributes.name }}</h2>
-    <div>Email : {{ client.attributes.email }}</div>
-    <div>Adresse : {{ client.attributes.address }}</div>
-    <div>Téléphone : {{ client.attributes.phoneNumber }}</div>
-    <div>
-      <h2>colis</h2>
-      <h3>Désignation :</h3>
-      <h3>Descriptif :</h3>
-      <h3>Date Réception :</h3>
+
+    <mat-card class="Clientcard">
+      <mat-card-header>
+        <mat-card-subtitle>Client {{client.attributes.id}}</mat-card-subtitle>
+        <mat-card-title>{{client.attributes.name | uppercase}}  {{client.attributes.surname}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Email : {{ client.attributes.email }}</p>
+        <p>Adresse : {{ client.attributes.address }}</p>
+        <p>Téléphone : {{ client.attributes.phoneNumber }}</p>
+
+
+        <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-progress-bar mode="determinate"></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+    <mat-card class="coli">
+      <mat-card-content>
+        <h2>colis</h2>
+        <h3>Descriptif :</h3>
+        <h3>Date Réception :</h3>
+        <h2>Etat Envoi</h2>
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-progress-bar mode="determinate"></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+    <mat-card class="buttonCard">
+      <mat-card-actions >
+        <button mat-button  class="button" (click)="generer(client)">CodeQR</button>
+      </mat-card-actions>
+    </mat-card>
     </div>
-    <div>
-      <h2>Etat Envoi</h2>
-      <h3>Exemple coli 1:</h3>
-      <h3>Exemple coli 2 :</h3>
-    </div>
-  </div>
-  <div class="qrCode">
-    <button (click)="generer(client)">générer codeQR</button>
-  </div>
 </ng-template>
 
 <ng-template #qrCode>
   <app-qr-code [id]="client.id"></app-qr-code>
-  <button class="reset" (click)="reset()">retour</button>
+  <button class="reset btn-outline-success" (click)="reset()">retour</button>
 </ng-template>

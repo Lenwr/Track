@@ -1,7 +1,7 @@
-.qrCode{
-    width: 200px;
-    height: 50px;
+*{
+  margin: 0px;
 }
+
 .qrCode button{
     font-size: xx-small;
 }
@@ -15,7 +15,32 @@
     font-size: xx-small;
 }
 .infos{
-    display: flex;flex-direction: column;
+    display: flex;
+  flex-direction: column;
     font-size:medium;
+  align-items: center;
 }
+.Clientcard{
+  width: 300px;
+  margin-top: 60px;
+ background-color: white;
+  color: black;
+}
+.coli{
+  width: 300px;
+  margin-top: 60px;
+  background-color: white;
+  color: black;
+}
+.buttonCard{
+  width: 100px;
+  height: 60px;
+  margin-top: 60px;
+  background-color: white;
+  color: black;
+}
+.button{
+}
+
+
 

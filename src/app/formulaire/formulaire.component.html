@@ -1,27 +1,38 @@
+
+
+<div class="container">
+  <div class="image">
+  <img src="./assets/people.png"/>
+  </div>
+<mat-card class="card">
 <form #usersForm="ngForm" (ngSubmit)="getUsersFormData(usersForm.value)">
-  <div class="container">
-    <img src="./assets/people.png" />
-    <div class="form">
-      <div class="field">
-
-        <input ngModel name="name" placeholder="Nom"  type="text" />
-      </div>
-      <div class="field">
-
-        <input ngModel name="surname" placeholder="Prénom" type="text" />
-      </div>
-      <div class="field">
-
-        <input ngModel name="email" placeholder="Email"  type="email" />
-      </div>
-      <div class="field">
-        <input ngModel name="address" placeholder="Adresse"  type="text" />
-      </div>
-      <div class="field">
-     
-        <input ngModel name="phoneNumber" placeholder="Téléphone"  type="tel" />
-      </div>
-      <button>Ajouter utilisateur</button>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="nom">Nom</label>
+      <input ngModel name="name"  type="text" class="form-control"  id="nom" placeholder="Nom">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="Prenom">Prénom</label>
+      <input ngModel name="surname" type="text" class="form-control" id="Prenom" placeholder="Prenom">
     </div>
   </div>
+  <div class="form-group">
+    <label for="telephone">Telephone</label>
+    <input type="text" ngModel name="phoneNumber"  class="form-control" id="telephone" placeholder="Téléphone">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input ngModel name="email" type="email" class="form-control" id="email" placeholder="xxxx@hotmail.fr">
+  </div>
+  <div class="form-group">
+    <label for="addresse">Addresse</label>
+    <input ngModel name="address" type="text" class="form-control" id="addresse" placeholder="12 rue des anges , 66600 Poussinet">
+  </div>
+
+  <button type="submit" id="button" class="btn btn-outline-success">Envoyer</button>
 </form>
+
+</mat-card>
+</div>
+
+

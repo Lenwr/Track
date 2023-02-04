@@ -15,9 +15,16 @@ import { QRCodeModule } from 'angularx-qrcode'
 import { QrCodeComponent } from './qr-code/qr-code.component'
 import { ScanComponent } from './scan/scan.component'
 import {ZXingScannerModule} from "@zxing/ngx-scanner";
-import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+
 
 
 @NgModule({
@@ -40,10 +47,17 @@ import {MatIconModule} from "@angular/material/icon";
     QRCodeModule,
     ZXingScannerModule,
     BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    MatTableModule,
+    MatPaginatorModule,
     MatFormFieldModule,
-    MatIconModule,
+    MatInputModule
+
   ],
-  providers: [{provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

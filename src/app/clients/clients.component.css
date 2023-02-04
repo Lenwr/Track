@@ -21,7 +21,7 @@ margin: 20px;
  .table {
 	 width: 100%;
 	 border: 1px solid #eee;
-	 
+
 }
  .table-header {
 	 display: flex;
@@ -44,7 +44,7 @@ margin: 20px;
 	 text-align: center;
 }
  .header__item {
-	
+
 	 font-size: xx-small;
 }
  .filter__link {
@@ -86,11 +86,22 @@ margin: 20px;
 	font-size: xx-small;
 	margin: 25px;
 }
+.container{
+  font-size: smaller;
+}
+#button{
+font-size: smaller;
 
-@media(min: 600){
- 
+}
+.clientDetails{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clientDetails button{
+  margin-top: 20px;
 }
 
-@media(min: 900){
-	
-}
+
+
+

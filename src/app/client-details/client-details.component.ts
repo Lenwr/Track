@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
+import {Router, Routes} from "@angular/router";
 
 @Component({
   selector: 'app-client-details',
@@ -9,7 +10,7 @@ export class ClientDetailsComponent implements OnInit {
   @Input() client?: any
   qr: boolean = false
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -18,5 +19,8 @@ export class ClientDetailsComponent implements OnInit {
   }
   reset() {
     this.qr = false
+  }
+  back(){
+    this.router.navigate(['colis'])
   }
 }

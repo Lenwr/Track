@@ -4,50 +4,41 @@
   ></div>
 
   <ng-template #afficherLesClients>
-    <div class="table" style="overflow-x: auto;">
-      <div class="table-header">
-        <div class="header__item">
-          <a id="name" class="filter__link" href="#">Nom</a>
-        </div>
-        <div class="header__item">
-          <a id="wins" class="filter__link filter__link--number" href="#">
-            prenom
-          </a>
-        </div>
-        <div class="header__item">
-          <a id="losses" class="filter__link filter__link--number" href="#">
-            adresse
-          </a>
-        </div>
-        <div class="header__item">
-          <a id="total" class="filter__link filter__link--number" href="#">
-            Téléphone
-          </a>
-        </div>
-        <div class="header__item">
-          <a id="total" class="filter__link filter__link--number" href="#">
-            mes colis
-          </a>
-        </div>
-      </div>
 
-      <div class="table-content" *ngFor="let client of myData">
-        <div class="table-row">
-          <div class="table-data">{{ client.attributes.name }}</div>
-          <div class="table-data">{{ client.attributes.surname }}</div>
-          <div class="table-data">{{ client.attributes.address }}</div>
-          <div class="table-data">{{ client.attributes.phoneNumber }}</div>
-          <div class="table-data">
-            <button (click)="onSelected(client)">Voir</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="text-center mb-4">Notre Clientèle</h4>
+          <div class="table-wrap">
+            <table class="table table-responsive table-hover">
+              <thead class="thead-primary">
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Addresse</th>
+                <th>Télephone</th>
+                <th>. . . </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let client of myData">
+                <th scope="row" class="scope border-bottom-0">{{ client.attributes.name |uppercase }}</th>
+                <td class="border-bottom-0">{{ client.attributes.surname }}</td>
+                <td class="border-bottom-0">{{ client.attributes.address }}</td>
+                <td class="border-bottom-0">{{ client.attributes.phoneNumber }}</td>
+                <td class="border-bottom-0"><a (click)="onSelected(client)" id="button" class="btn btn-outline-success">plus</a></td>
+              </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
   </ng-template>
-  <ng-template #afficherLeClient>
-    <div class="reset">
-      <button (click)="reinitialiser()">retour</button>
-    </div>
+  <ng-template #afficherLeClient >
+    <div class="clientDetails">
     <app-client-details [client]="selectedClient"></app-client-details>
+    <button type="button" class="btn btn-outline-success" (click)="back()">retour</button>
+    </div>
   </ng-template>
 </div>

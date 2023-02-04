@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
 import { UsersDataService } from '../service/users-data.service'
+
+
+
+
 
 @Component({
   selector: 'app-clients',
@@ -12,16 +15,16 @@ export class ClientsComponent implements OnInit {
   myData: any
   //variable dans laquelle mettre le client sélectionné
   selectedClient: any
-  
+
 
   constructor(
     private myDataService: UsersDataService,
-    private router: Router,
   ) {}
 
   ngOnInit(): void {
     this.myDataService.users().subscribe((result: any) => {
       this.myData = result.data
+
       console.log(this.myData)
     })
   }
@@ -31,7 +34,10 @@ export class ClientsComponent implements OnInit {
   }
 
 
-  reinitialiser() {
+  back() {
     this.selectedClient = false
   }
+
+
 }
+

@@ -40,3 +40,36 @@ button{
 
 }
 
+
+
+
+
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+.container{
+  display: flex;
+}
+.image{
+  margin-top: 50px;
+}
+.mat-card{
+  width: 350px;
+  justify-self: center;
+}
+.card{
+  background: white;
+}
+#button{
+ margin-left: 110px;
+}
