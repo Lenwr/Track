@@ -6,7 +6,10 @@
 .container img{
   width: 100px;
   height: 100px;
-  margin: 20px;
+  margin: 5px;
+}
+.start{
+  margin-top: 25px;
 }
 .card{
   width: 300px;
@@ -17,6 +20,7 @@
 input{
   width: 250px;
   margin: 5px;
+
 }
 button{
   margin-top: 20px;
