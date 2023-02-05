@@ -7,3 +7,42 @@
 .camera{
             margin-top: 30px;
 }
+
+
+.reset{
+  margin: 10px ;
+  width: 70px;
+  height: 30px;
+  font-size: xx-small;
+}
+.reset button{
+  font-size: xx-small;
+}
+.infos{
+  display: flex;
+  flex-direction: column;
+  font-size:medium;
+  align-items: center;
+}
+.Clientcard{
+  width: 300px;
+  margin-top: 60px;
+  background-color: white;
+  color: black;
+}
+.coli{
+  width: 300px;
+  margin-top: 60px;
+  background-color: white;
+  color: black;
+}
+.buttonCard{
+  width: 100px;
+  height: 60px;
+  margin-top: 60px;
+  background-color: white;
+  color: black;
+}
+.button{
+}
+

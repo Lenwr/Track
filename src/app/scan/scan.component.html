@@ -5,24 +5,40 @@
 </ng-template>
 
 <ng-template #client>
-  <div class="infos" *ngIf="client">
-    <h2>Nom : {{ redirectUser.attributes.name }}</h2>
-    <div>Email : {{ redirectUser.attributes.email }}</div>
-    <div>Adresse : {{ redirectUser.attributes.address }}</div>errzSD
-    <div>Téléphone : {{ redirectUser.attributes.phoneNumber }}</div>
-    <div>
+<div class="infos" >
+
+  <mat-card class="Clientcard">
+    <mat-card-header>
+      <mat-card-subtitle>Client {{redirectUser.attributes.id}}</mat-card-subtitle>
+      <mat-card-title>{{redirectUser.attributes.name | uppercase}}  {{redirectUser.attributes.surname}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Email : {{ redirectUser.attributes.email }}</p>
+      <p>Adresse : {{ redirectUser.attributes.address }}</p>
+      <p>Téléphone : {{ redirectUser.attributes.phoneNumber }}</p>
+
+
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-footer>
+      <mat-progress-bar mode="determinate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+  <mat-card class="coli">
+    <mat-card-content>
       <h2>colis</h2>
-      <h3>Désignation :</h3>
       <h3>Descriptif :</h3>
       <h3>Date Réception :</h3>
-    </div>
-    <div>
       <h2>Etat Envoi</h2>
-      <h3>Exemple coli 1:</h3>
-      <h3>Exemple coli 2 :</h3>
-    </div>
-    <div class="reset">
-      <button (click)="reinitialiser()">retour</button>
-    </div>
-  </div>
+    </mat-card-content>
+    <mat-card-footer>
+      <mat-progress-bar mode="determinate"></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+  <mat-card class="buttonCard">
+    <mat-card-actions >
+      <button mat-button  class="button" (click)="reinitialiser()">Fermer</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
 </ng-template>

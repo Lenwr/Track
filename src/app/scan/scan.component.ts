@@ -23,7 +23,8 @@ export class ScanComponent implements OnInit {
 
   onCodeResult(Result:string){
     this.scanResult=Result
-    this.redirectUser=this.user.data[this.scanResult-1]
+    console.log(this.scanResult)
+    this.redirectUser = this.user.data[this.scanResult - 1]
     console.log(this.redirectUser)
 
   }
